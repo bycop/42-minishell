@@ -1,0 +1,32 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   token_trunc.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jperrier <jperrier@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/16 12:51:51 by jperrier          #+#    #+#             */
+/*   Updated: 2021/09/22 14:50:45 by jperrier         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "minishell.h"
+
+int	token_trunc(t_token *tok)
+{
+	t_cmd	*cmd;
+	int		fd;
+
+	cmd = malloc(sizeof(t_cmd));
+	if (cmd == NULL)
+		return (1);
+	split_args(cmd, tok->str);
+	addparams(cmd);
+	args_treatment(cmd);
+	fd = open(cmd->args[0], O_CREAT | O_WRONLY | O_TRUNC, S_IRWXU);
+	if (fd == -1)
+		return (1);
+	dup2(fd, STDOUT_FILENO);
+	free(cmd);
+	return (0);
+}
