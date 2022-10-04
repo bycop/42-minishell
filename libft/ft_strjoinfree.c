@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoinfree.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sfournio <sfournio@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: bycop <bycop@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/17 14:49:45 by sfournio          #+#    #+#             */
-/*   Updated: 2021/03/19 11:06:20 by sfournio         ###   ########lyon.fr   */
+/*   Created: 2021/03/17 14:49:45 by bycop          #+#    #+#             */
+/*   Updated: 2021/03/19 11:06:20 by bycop         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
